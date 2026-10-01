@@ -1,6 +1,5 @@
 const findTheOldest = function (people) {
   const peopleSorted = people.sort((personA, personB) => {
-    console.log(personB.yearOfDeath);
     if (personA.yearOfDeath === undefined) {
       const now = new Date();
       personA.yearOfDeath = now.getFullYear();
@@ -16,7 +15,6 @@ const findTheOldest = function (people) {
       (personB.yearOfDeath - personB.yearOfBirth)
     );
   });
-  console.log(peopleSorted);
   return peopleSorted[peopleSorted.length - 1];
 };
 
